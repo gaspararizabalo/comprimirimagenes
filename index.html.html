@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script src="https://quge5.com/88/tag.min.js" data-zone="216858" async data-cfasync="false"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comprimir Imágenes Gratis Online | Sin límites, sin registro</title>
+<meta name="description" content="Comprimí tus fotos JPG, PNG y WebP gratis online. Sin registro, sin límites, sin perder calidad visible.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ── CURSORES MACOS TAHOE ── */
+:root {
+  --cursor-default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cfilter id='shadow'%3E%3CfeDropShadow dx='0' dy='1' stdDeviation='1.5' flood-opacity='0.35'/%3E%3C/filter%3E%3Cg filter='url(%23shadow)'%3E%3Cpath d='M6 2 L6 24 L11 19 L15 28 L18 27 L14 18 L21 18 Z' fill='black' stroke='white' stroke-width='2.5' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") 6 2, auto;
+  --cursor-pointer: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cfilter id='s'%3E%3CfeDropShadow dx='0' dy='1' stdDeviation='1.5' flood-opacity='0.35'/%3E%3C/filter%3E%3Cg filter='url(%23s)'%3E%3Cpath d='M12 4 C12 2.9 12.9 2 14 2 C15.1 2 16 2.9 16 4 L16 14 C16.6 13.4 17.5 13 18.5 13 C19.6 13 20.5 13.5 21 14.3 C21.6 13.7 22.4 13.3 23.3 13.3 C24.5 13.3 25.5 14 26 15 C26.5 14.4 27.3 14 28.2 14 C29.7 14 31 15.3 31 16.8 L31 23 C31 27.4 27.4 31 23 31 L19 31 C16.2 31 13.7 29.5 12.3 27.2 L7.5 19.5 C7 18.6 7.3 17.4 8.2 16.9 C9.1 16.3 10.3 16.6 10.9 17.5 L12 19.3 Z' fill='black' stroke='white' stroke-width='2.2' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") 14 2, pointer;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { cursor: var(--cursor-default) !important; }
+
+a, button, input[type=range], select, label,
+.fmt, .btn-dl, .btn-rm, .btn-dl-all, .btn-clear,
+strong, [role=button], .dz-label strong, #bl, #dz {
+  cursor: var(--cursor-pointer) !important;
+}
+/* ── FIN CURSORES ── */
+
+:root {
+  --bg: #0a0a0a; --surface: #141414; --surface2: #1c1c1c;
+  --border: #252525; --accent: #c8f060; --text: #f0ede6;
+  --muted: #5a5a5a; --green: #4ade80; --red: #f87171;
+}
+
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'DM Mono', monospace;
+  min-height: 100vh; display: flex; flex-direction: column;
+  align-items: center; padding: 56px 20px 60px;
+}
+
+header { text-align: center; margin-bottom: 48px; }
+h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.4rem,6vw,4rem); font-style: italic; letter-spacing: -.02em; line-height: 1; }
+h1 span { color: var(--accent); }
+.sub { margin-top: 10px; font-size: .75rem; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+.badges { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+.badge { background: rgba(200,240,96,.08); border: 1px solid rgba(200,240,96,.2); color: var(--accent); font-size: .63rem; letter-spacing: .1em; text-transform: uppercase; padding: 4px 10px; border-radius: 99px; }
+
+.wrap { width: 100%; max-width: 740px; display: flex; flex-direction: column; gap: 16px; }
+
+#dz { background: var(--surface); border: 2px dashed var(--border); border-radius: 14px; padding: 52px 24px; text-align: center; transition: border-color .2s, background .2s; }
+#dz:hover, #dz.over { border-color: var(--accent); background: rgba(200,240,96,.03); }
+#dz input { display: none; }
+.dz-icon { font-size: 2.6rem; display: block; margin-bottom: 14px; }
+.dz-label { font-size: .85rem; color: var(--muted); }
+.dz-label strong { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.dz-formats { font-size: .66rem; color: var(--muted); margin-top: 6px; }
+
+.controls { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px 28px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.ctrl-label { font-size: .7rem; color: var(--muted); letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; }
+.slider-wrap { flex: 1; min-width: 160px; display: flex; align-items: center; gap: 14px; }
+input[type=range] { flex: 1; -webkit-appearance: none; height: 3px; border-radius: 99px; background: var(--border); outline: none; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); }
+.quality-val { font-size: 1.1rem; font-weight: 500; color: var(--accent); min-width: 36px; text-align: right; }
+.format-btns { display: flex; gap: 6px; }
+.fmt { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: .7rem; padding: 6px 12px; letter-spacing: .06em; text-transform: uppercase; transition: all .15s; }
+.fmt.active, .fmt:hover { border-color: var(--accent); color: var(--accent); background: rgba(200,240,96,.06); }
+
+#file-list { display: flex; flex-direction: column; gap: 10px; }
+.file-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; align-items: center; animation: fadein .25s ease; }
+@keyframes fadein { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.thumb { width: 48px; height: 48px; border-radius: 6px; object-fit: cover; display: block; }
+.thumb-ph { width: 48px; height: 48px; border-radius: 6px; background: var(--surface2); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+.file-name { font-size: .78rem; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 320px; }
+.file-sizes { display: flex; align-items: center; gap: 8px; margin-top: 5px; font-size: .68rem; }
+.size-orig { color: var(--muted); }
+.size-new { color: var(--green); font-weight: 500; }
+.size-saving { background: rgba(74,222,128,.1); border: 1px solid rgba(74,222,128,.2); color: var(--green); font-size: .6rem; padding: 2px 7px; border-radius: 99px; }
+.file-actions { display: flex; gap: 8px; align-items: center; }
+.btn-dl { background: var(--accent); color: #0a0a0a; border: none; border-radius: 6px; font-family: 'DM Mono', monospace; font-size: .7rem; font-weight: 500; letter-spacing: .05em; padding: 8px 14px; text-transform: uppercase; transition: opacity .15s; }
+.btn-dl:hover { opacity: .85; }
+.btn-dl:disabled { opacity: .3; }
+.btn-rm { background: transparent; border: 1px solid var(--border); border-radius: 6px; color: var(--muted); font-size: .9rem; padding: 7px 10px; transition: border-color .15s, color .15s; }
+.btn-rm:hover { border-color: var(--red); color: var(--red); }
+.processing { display: flex; align-items: center; gap: 8px; font-size: .68rem; color: var(--muted); }
+.spinner { width: 14px; height: 14px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+#batch-bar { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; display: none; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.batch-info { font-size: .75rem; color: var(--muted); }
+.batch-info strong { color: var(--accent); }
+.btn-dl-all { background: var(--accent); color: #0a0a0a; border: none; border-radius: 6px; font-family: 'DM Mono', monospace; font-size: .78rem; font-weight: 500; letter-spacing: .06em; padding: 10px 20px; text-transform: uppercase; transition: opacity .15s; }
+.btn-dl-all:hover { opacity: .85; }
+.btn-clear { background: transparent; border: 1px solid var(--border); border-radius: 6px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: .72rem; padding: 9px 14px; text-transform: uppercase; transition: border-color .15s, color .15s; }
+.btn-clear:hover { border-color: var(--red); color: var(--red); }
+
+.seo { max-width: 740px; width: 100%; margin-top: 64px; color: var(--muted); font-size: .77rem; line-height: 1.85; }
+.seo h2 { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: var(--text); font-style: italic; margin: 28px 0 10px; }
+footer { margin-top: 48px; font-size: .63rem; color: var(--muted); text-align: center; line-height: 2; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Comprimí<span> tus fotos</span></h1>
+  <p class="sub">Compresor de imágenes online</p>
+  <div class="badges">
+    <span class="badge">✦ 100% gratis</span>
+    <span class="badge">✦ sin registro</span>
+    <span class="badge">✦ sin límites</span>
+    <span class="badge">✦ corre en tu browser</span>
+  </div>
+</header>
+
+<div class="wrap">
+  <div id="dz">
+    <input type="file" id="fi" accept="image/jpeg,image/png,image/webp,image/gif" multiple>
+    <span class="dz-icon">🖼</span>
+    <p class="dz-label">Arrastrá tus imágenes acá o <strong id="bl">elegí archivos</strong></p>
+    <p class="dz-formats">JPG · PNG · WebP · GIF &nbsp;·&nbsp; hasta 50 archivos a la vez</p>
+  </div>
+
+  <div class="controls">
+    <span class="ctrl-label">Calidad</span>
+    <div class="slider-wrap">
+      <input type="range" id="quality" min="10" max="95" value="75">
+      <span class="quality-val" id="qval">75%</span>
+    </div>
+    <span class="ctrl-label" style="margin-left:8px">Formato</span>
+    <div class="format-btns">
+      <button class="fmt active" data-fmt="original">Original</button>
+      <button class="fmt" data-fmt="image/jpeg">JPG</button>
+      <button class="fmt" data-fmt="image/webp">WebP</button>
+      <button class="fmt" data-fmt="image/png">PNG</button>
+    </div>
+  </div>
+
+  <div id="file-list"></div>
+
+  <div id="batch-bar">
+    <span class="batch-info">
+      <strong id="batch-count">0</strong> imágenes · ahorraste <strong id="batch-saving">0 KB</strong>
+    </span>
+    <div style="display:flex;gap:8px">
+      <button class="btn-clear" id="btn-clear">Limpiar todo</button>
+      <button class="btn-dl-all" id="btn-dl-all">⬇ Descargar todo (.zip)</button>
+    </div>
+  </div>
+</div>
+
+<div class="seo">
+  <h2>¿Por qué comprimir imágenes?</h2>
+  <p>Las imágenes sin comprimir pueden pesar entre 3 y 10 MB. Comprimirlas reduce el peso entre un 60% y un 85% sin pérdida visible.</p>
+  <h2>¿Cómo funciona?</h2>
+  <p>Todo ocurre en tu browser con Canvas API. Tus fotos nunca se suben a ningún servidor.</p>
+  <h2>¿Qué calidad usar?</h2>
+  <p>Para web y redes sociales, 70-80% es perfecto. Para impresión, 85-90%.</p>
+</div>
+
+<footer>
+  Tus imágenes nunca salen de tu dispositivo — todo se procesa localmente.<br>
+  © 2026 ComprimirFoto.app
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+var dz=document.getElementById('dz'),fi=document.getElementById('fi'),bl=document.getElementById('bl');
+var qualityEl=document.getElementById('quality'),qval=document.getElementById('qval');
+var fileList=document.getElementById('file-list'),batchBar=document.getElementById('batch-bar');
+var batchCount=document.getElementById('batch-count'),batchSaving=document.getElementById('batch-saving');
+var btnDlAll=document.getElementById('btn-dl-all'),btnClear=document.getElementById('btn-clear');
+var fmtBtns=document.querySelectorAll('.fmt');
+var quality=75,outputFmt='original',files=[];
+
+qualityEl.addEventListener('input',function(){quality=parseInt(this.value);qval.textContent=quality+'%';recompressAll();});
+fmtBtns.forEach(function(b){b.addEventListener('click',function(){fmtBtns.forEach(function(x){x.classList.remove('active')});b.classList.add('active');outputFmt=b.dataset.fmt;recompressAll();});});
+bl.addEventListener('click',function(e){e.stopPropagation();fi.click();});
+dz.addEventListener('click',function(){fi.click();});
+dz.addEventListener('dragover',function(e){e.preventDefault();dz.classList.add('over');});
+dz.addEventListener('dragleave',function(){dz.classList.remove('over');});
+dz.addEventListener('drop',function(e){e.preventDefault();dz.classList.remove('over');addFiles(Array.from(e.dataTransfer.files).filter(function(f){return f.type.startsWith('image/');}));});
+fi.addEventListener('change',function(){addFiles(Array.from(fi.files));fi.value='';});
+
+function addFiles(newFiles){
+  newFiles.slice(0,50).forEach(function(f){
+    var id='f'+Date.now()+Math.random().toString(36).slice(2);
+    var entry={id:id,file:f,origSize:f.size,compressedBlob:null,compressedSize:0,error:null};
+    files.push(entry);renderCard(entry);compress(entry);
+  });
+  updateBatch();
+}
+
+function renderCard(entry){
+  var card=document.createElement('div');card.className='file-card';card.id='card-'+entry.id;
+  var thumb=document.createElement('div');thumb.className='thumb-ph';thumb.innerHTML='🖼';thumb.id='thumb-'+entry.id;
+  var info=document.createElement('div');info.className='file-info';
+  info.innerHTML='<div class="file-name">'+esc(entry.file.name)+'</div><div class="file-sizes" id="sizes-'+entry.id+'"><span class="processing"><span class="spinner"></span> Comprimiendo…</span></div>';
+  var actions=document.createElement('div');actions.className='file-actions';
+  actions.innerHTML='<button class="btn-dl" disabled id="dl-'+entry.id+'">Descargar</button><button class="btn-rm" onclick="removeFile(\''+entry.id+'\')">✕</button>';
+  card.appendChild(thumb);card.appendChild(info);card.appendChild(actions);
+  fileList.appendChild(card);
+  var reader=new FileReader();
+  reader.onload=function(e){var img=document.createElement('img');img.className='thumb';img.src=e.target.result;var ph=document.getElementById('thumb-'+entry.id);if(ph)ph.replaceWith(img);};
+  reader.readAsDataURL(entry.file);
+}
+
+function compress(entry){
+  var img=new Image();var url=URL.createObjectURL(entry.file);
+  img.onload=function(){
+    var canvas=document.createElement('canvas');canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;
+    canvas.getContext('2d').drawImage(img,0,0);URL.revokeObjectURL(url);
+    var mime=outputFmt==='original'?entry.file.type:outputFmt;
+    if(mime==='image/png'){canvas.toBlob(function(b){done(entry,b,mime);},'image/png');}
+    else{canvas.toBlob(function(b){done(entry,b,mime);},mime||'image/jpeg',quality/100);}
+  };
+  img.onerror=function(){entry.error=true;var s=document.getElementById('sizes-'+entry.id);if(s)s.innerHTML='<span style="color:var(--red);font-size:.68rem">Error</span>';};
+  img.src=url;
+}
+
+function done(entry,blob,mime){
+  if(!blob){entry.error=true;return;}
+  entry.compressedBlob=blob;entry.compressedSize=blob.size;
+  var saving=((entry.origSize-blob.size)/entry.origSize*100);
+  var ext=mime==='image/webp'?'webp':mime==='image/png'?'png':'jpg';
+  var outName=entry.file.name.replace(/\.[^.]+$/,'')+'.'+ext;
+  var sizesEl=document.getElementById('sizes-'+entry.id);
+  if(sizesEl){
+    var savBadge=saving>0?'<span class="size-saving">-'+saving.toFixed(0)+'%</span>':'';
+    sizesEl.innerHTML='<span class="size-orig">'+fmt(entry.origSize)+'</span><span style="color:var(--muted)">→</span><span class="size-new">'+fmt(blob.size)+'</span>'+savBadge;
+  }
+  var dlBtn=document.getElementById('dl-'+entry.id);
+  if(dlBtn){dlBtn.disabled=false;dlBtn.onclick=function(){dlBlob(blob,outName);};}
+  updateBatch();
+}
+
+function recompressAll(){
+  files.forEach(function(e){
+    if(!e.error){
+      e.compressedBlob=null;
+      var s=document.getElementById('sizes-'+e.id);if(s)s.innerHTML='<span class="processing"><span class="spinner"></span> Comprimiendo…</span>';
+      var b=document.getElementById('dl-'+e.id);if(b)b.disabled=true;
+      compress(e);
+    }
+  });
+}
+
+window.removeFile=function(id){files=files.filter(function(f){return f.id!==id;});var c=document.getElementById('card-'+id);if(c)c.remove();updateBatch();};
+btnClear.addEventListener('click',function(){files=[];fileList.innerHTML='';updateBatch();});
+btnDlAll.addEventListener('click',function(){
+  var ready=files.filter(function(f){return f.compressedBlob;});if(!ready.length)return;
+  var zip=new JSZip();
+  ready.forEach(function(e){var mime=outputFmt==='original'?e.file.type:outputFmt;var ext=mime==='image/webp'?'webp':mime==='image/png'?'png':'jpg';zip.file(e.file.name.replace(/\.[^.]+$/,'')+'.'+ext,e.compressedBlob);});
+  zip.generateAsync({type:'blob'}).then(function(b){dlBlob(b,'imagenes-comprimidas.zip');});
+});
+
+function updateBatch(){
+  var ready=files.filter(function(f){return f.compressedBlob;});
+  var saved=ready.reduce(function(a,f){return a+(f.origSize-f.compressedSize);},0);
+  batchCount.textContent=ready.length;batchSaving.textContent=fmt(Math.max(0,saved));
+  batchBar.style.display=files.length>0?'flex':'none';
+}
+function dlBlob(blob,name){var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(function(){URL.revokeObjectURL(a.href);},1000);}
+function fmt(b){if(b<1024)return b+'B';if(b<1048576)return (b/1024).toFixed(0)+'KB';return (b/1048576).toFixed(1)+'MB';}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+</script>
+</body>
+</html>
